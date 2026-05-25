@@ -1,147 +1,106 @@
 # SelfMend
 
-**Your AI never goes down. It heals itself.**
+**你的AI永远不会宕机。它自我修复。**
 
-*Auto-detect. Auto-repair. Auto-prevent.*
-
----
-
-## The Hook
-
-```
-"What if your AI never went down?
- Even when something breaks,
- it fixes itself and keeps running."
-```
-
-**The Problem:**
-
-AI systems fail in production:
-- API timeouts crash dependent workflows
-- Model errors propagate to users
-- Cascading failures take down entire systems
-- Downtime means lost users and revenue
-
-Traditional resilience is manual:
-- Engineers on-call 24/7
-- Fixes applied reactively
-- Systems vulnerable to single points of failure
+*自动检测。自动修复。自动预防。*
 
 ---
 
-## The Core Insight
+凌晨3点，你的AI系统出问题了。
 
-**Failures are inevitable. Downtime is optional.**
+API超时。依赖它的业务流程全部中断。工程师被叫起来处理。手动切换到备用方案。问题定位。修复。验证。凌晨5点，系统恢复。
 
-SelfMend introduces 3-layer automatic recovery:
-1. **Detect** — Identify failures before they cascade
-2. **Repair** — Fix failures automatically
-3. **Prevent** — Eliminate root causes permanently
+这是传统的弹性方案。但它需要人，需要时间，需要成本。
+
+**SelfMend 让系统在人类介入之前就自我修复。**
 
 ---
 
-## The 3-Layer Protection System
+## 核心洞察
 
-### Layer 1: Failure Detection
+故障是不可避免的。但宕机是可选的。
 
-```
-[Health Monitor] 
-  → Checks: API availability, response time, output quality
-  → Triggers: Alert when thresholds exceeded
-  → Prevents: Cascading failures from spreading
-```
+SelfMend 引入**3层自动恢复**：
 
-### Layer 2: Self-Healing
+1. **检测** — 在故障蔓延前识别
+2. **修复** — 自动修复，无需人工
+3. **预防** — 永久消除根因
 
-```
-[Recovery Engine]
-  → On detection: Isolate failed component
-  → Fallback: Route to backup model/endpoint
-  → Retry: Attempt recovery with backoff
-  → Report: Log incident for review
-```
+---
 
-### Layer 3: Root Cause Elimination
+## 三层保护系统
+
+**Layer 1: 故障检测**
 
 ```
-[Pattern Analyzer]
-  → Identifies: Recurring failure patterns
-  → Proposes: Permanent fixes to design
-  → Validates: Fixes before deployment
-  → Prevents: Same failure from recurring
+[健康监控器]
+  → 检查: API可用性、响应时间、输出质量
+  → 触发: 超过阈值时告警
+  → 防止: 故障蔓延扩散
+```
+
+**Layer 2: 自我修复**
+
+```
+[恢复引擎]
+  → 检测到: 隔离故障组件
+  → 备用方案: 路由到备用模型/端点
+  → 重试: 退避后尝试恢复
+  → 报告: 记录事件供审查
+```
+
+**Layer 3: 根因消除**
+
+```
+[模式分析器]
+  → 识别: 反复出现的故障模式
+  → 提出: 设计层面的永久修复
+  → 验证: 修复部署前验证
+  → 预防: 阻止同类故障再次发生
 ```
 
 ---
 
-## The Architecture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                   HEALTH MONITOR                       │
-│   [API Checker] [Latency Tracker] [Quality Sensor]     │
-├─────────────────────────────────────────────────────────┤
-│                   RECOVERY ENGINE                       │
-│   [Isolator] [Fallback Router] [Retry Controller]      │
-├─────────────────────────────────────────────────────────┤
-│                   PATTERN ANALYZER                      │
-│   [Trend Detector] [Fix Generator] [Validator]         │
-└─────────────────────────────────────────────────────────┘
-```
-
----
-
-## The Spotlight
-
-**SelfMend turns "something broke" into "something is being fixed."**
-
-- Instead of systems going down, they stay up while fixing
-- Instead of engineers responding to incidents, they review automated fixes
-- Instead of repeated failures, root causes are eliminated
-
-**Core belief**: *The best failure is one that heals itself.*
-
----
-
-## Quick Start Concept
+## 快速开始
 
 ```python
-# SelfMend protects your AI system
+# SelfMend 保护你的AI系统
 system = SelfMend()
 system.monitor(api_endpoint)
 system.monitor(model_health)
 system.monitor(output_quality)
 
-# When something fails...
-# Detection → Isolation → Fallback → Recovery
-# All automatic, zero human intervention
+# 当发生故障时...
+# 检测 → 隔离 → 备用方案 → 恢复
+# 全自动，零人工介入
 ```
 
 ---
 
-## What's Inside
+## 理念
 
-```
-selfmend/
-├── README.md           # This file
-├── HEALTH_MONITOR.md   # Detection layer deep dive
-├── RECOVERY_ENGINE.md  # Self-healing protocols
-├── PATTERN_ANALYZER.md # Root cause elimination
-└── EXAMPLES/           # Real-world resilience scenarios
-```
+**我们相信：**
+- 最好的故障处理是防止故障发生
+- 自我修复比手动修复更快、更便宜
+- 系统应该从故障中学习，而不是重复同样的错误
 
----
-
-## The Hook (Realized)
-
-```
-Before SelfMend:  "Something broke. We need to fix it."
-After SelfMend:   "Something broke. It's already fixed."
-```
-
-That's the power of self-healing systems.
+**SelfMend 适合：**
+- 需要24/7运行的AI系统
+- 不能容忍人工介入延迟的业务
+- 想把可靠性从"人力堆砌"变为"系统设计"
 
 ---
 
-*Systems that heal themselves never stop.*
+## 爆点
 
-**SelfMend** — *Where AI resilience is automatic.*
+> "当别人在深夜被叫醒处理故障的时候，SelfMend已经在故障影响你之前修复了它。"
+
+最好的故障是"已经修复好的故障"。
+
+这就是自我修复系统的力量。
+
+---
+
+*能自我修复的系统，永不停止。*
+
+**SelfMend** — *让AI弹性成为自动化的能力。*
