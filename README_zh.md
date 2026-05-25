@@ -102,7 +102,7 @@ system.monitor(output_quality)
 
 ---
 
-## 爆点
+## 核心价值
 
 > "当别人在深夜被叫醒处理故障的时候，SelfMend已经在故障影响你之前修复了它。"
 
