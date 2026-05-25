@@ -1,4 +1,8 @@
 # SelfMend
+[![self healing](https://img.shields.io/badge/self-healing-FFD740?style=flat-square)](#)
+[![fault tolerance](https://img.shields.io/badge/fault-tolerance-FF6E40?style=flat-square)](#)
+[![MIT协议](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+[![版本1.0](https://img.shields.io/badge/version-1.0.0-orange?style=flat-square)](#)
 
 **你的AI永远不会宕机。它自我修复。**
 
